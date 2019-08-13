@@ -1,4 +1,6 @@
 import Widget from require "lapis.html"
+import MenuWidget from require "widgets.common.menu"
 
-class DashboardWidget extends Widget
+class MainDashboardWidget extends Widget
   content: =>
+    widget MenuWidget!
