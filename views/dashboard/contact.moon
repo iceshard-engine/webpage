@@ -15,3 +15,7 @@ class MainDashboardWidget extends Widget
     div class:'container', ->
       h2 class:'h2', "Contact"
       p class:'text', "Currently you can reach me through the following means:"
+
+      p class:'text', ->
+        span class:'bold', 'Mail: '
+        span class:'text-monospace', 'dandielo@windowslive.com'
