@@ -20,4 +20,13 @@ class MenuWidget extends Widget
               a class:'nav-link nav-link disabled', href:'#', "About"
               a class:'nav-link nav-link disabled', href:'#', "Contact"
 
+    @content_for "footer", ->
+      div class:'fixed-bottom', style:'background-color:lightgray;', ->
+        div class:'container', ->
+          div class:'row', ->
+            div class:'col-sm', ->
+              span class:'align-middle', '© 2019 Daniel Penkała'
+            div class:'col-sm-3 float-right text-right', ->
+              span class:'align-middle', ''
+
 { :MenuWidget }
