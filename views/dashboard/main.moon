@@ -1,6 +1,7 @@
 import Widget from require "lapis.html"
 import MenuWidget from require "widgets.common.menu"
 import PageWidget from require "widgets.common.page"
+import JumbotronWidget from require "widgets.common.jumbotron"
 
 import Articles, ArticleHistory from require "models"
 import preload from require "lapis.db.model"
@@ -8,12 +9,7 @@ import preload from require "lapis.db.model"
 class MainDashboardWidget extends Widget
   content: =>
     widget MenuWidget
-
-    div class:'jumbotron jumbotron-fluid', ->
-      div class:'container', ->
-        h1 class:'display-4', "Hello Traveler!"
-        p class:'lead', "Welcome on this website, it's far from completed but feel free to take a look :)"
-
+    widget JumbotronWidget
 
     div class:'container', ->
 

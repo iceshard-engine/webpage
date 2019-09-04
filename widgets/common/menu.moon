@@ -16,9 +16,8 @@ class MenuWidget extends Widget
           div class:'col-10', ->
             div class:'navbar-nav', ->
 
-              a class:'nav-item nav-link active', href:'#', "Home"
-              a class:'nav-link nav-link disabled', href:'#', "About"
-              a class:'nav-link nav-link disabled', href:'#', "Contact"
+              for item in *@navbar
+                a class:"nav-item nav-link #{item.disabled and 'disabled' or ''} #{item.active and 'active' or ''}", href:item.url, item.text
 
     @content_for "footer", ->
       div class:'fixed-bottom', style:'background-color:lightgray;', ->
