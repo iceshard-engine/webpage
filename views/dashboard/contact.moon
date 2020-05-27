@@ -3,10 +3,10 @@ import MenuWidget from require "widgets.common.menu"
 import PageWidget from require "widgets.common.page"
 import JumbotronWidget from require "widgets.common.jumbotron"
 
-import Articles, ArticleHistory from require "models"
+import Article, ArticleHistory from require "models"
 import preload from require "lapis.db.model"
 
-class MainDashboardWidget extends Widget
+class MainDashboardPage extends Widget
   content: =>
     widget MenuWidget
     widget JumbotronWidget

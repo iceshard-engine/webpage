@@ -30,6 +30,11 @@ class DefaultLayout extends Widget
 
       body ->
         @content_for 'navbar' if @has_content_for 'navbar'
-        @content_for 'inner'
+        if @has_content_for 'jumbotron'
+          @content_for 'jumbotron'
+          @content_for 'inner'
+        else
+          div class:'container-fluid pt-5', ->
+            @content_for 'inner'
 
         @content_for 'footer' if @has_content_for 'footer'

@@ -5,12 +5,14 @@ autoload "models"
 
 
 
-class Users extends Model
+class User extends Model
+  @table_name: => 'users'
   @relations: {
     { "history", belongs_to:"ArticleHistory" }
   }
 
-class Articles extends Model
+class Article extends Model
+  @table_name: => 'articles'
   @timestamp: true
   @relations: {
     { "history", has_many:"ArticleHistory" }
@@ -20,11 +22,11 @@ class ArticleHistory extends Model
   @timestamp: true
   @primary_key: { "user_id", "article_id", "revision" }
   @relations: {
-    { "user", belongs_to:"Users" }
-    { "article", belongs_to:"Articles" }
+    { "user", belongs_to:"User" }
+    { "article", belongs_to:"Article" }
   }
 
   @table_name: => "article_history"
 
 
-{ :Users, :Articles, :ArticleHistory }
+{ :User, :Article, :ArticleHistory }

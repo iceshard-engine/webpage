@@ -1,7 +1,7 @@
 import Widget from require "lapis.html"
 import MenuWidget from require "widgets.common.menu"
 
-class LogoDashboardWidget extends Widget
+class LogoDashboardPage extends Widget
   content: =>
     div class:'container', style:'margin:auto;width:410px;;margin-top:15%;', ->
       div class:'row', style:'transform:rotate(0);', ->
@@ -12,5 +12,5 @@ class LogoDashboardWidget extends Widget
 
         div ->
           a href:'/main', class:'text-decoration-none', ->
-            h1 class:'display-1', style:"color:#749EAD;", "ceShard"
+            h1 class:'display-1', style:"color:#749EAD;", "IceShard"
           h6 class:'text-muted ml-2', "- Just another game engine."
