@@ -8,6 +8,3 @@ logs/
 # Generated files
 nginx.conf.compiled
 *.lua
-
-# Special files
-config.moon
