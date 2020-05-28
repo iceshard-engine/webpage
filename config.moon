@@ -10,15 +10,15 @@ config "development", ->
   port 80
 
   -- Mandatory
-  session_name os.getenv 'APP_SESSION_NAME'
-  secret os.getenv 'APP_SECRET'
+  session_name os.getenv 'LAPIS_SESSION_NAME'
+  secret os.getenv 'LAPIS_APP_SECRET'
 
   -- Database
   postgres ->
     host host_ip
-    user os.getenv 'POSTGRES_USER'
-    password os.getenv 'POSTGRES_PASSWORD'
-    database os.getenv 'POSTGRES_DATABASE'
+    user os.getenv 'LAPIS_POSTGRES_USER'
+    password os.getenv 'LAPIS_POSTGRES_PASSWORD'
+    database os.getenv 'LAPIS_POSTGRES_DATABASE'
 
 config "production", ->
   port 80
