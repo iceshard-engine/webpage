@@ -18,4 +18,4 @@ class MainDashboardPage extends Widget
 
       p class:'text', ->
         span class:'bold', 'Mail: '
-        span class:'text-monospace', 'dandielo@windowslive.com'
+        span class:'text-monospace', 'dandielo@iceshard.net'
